@@ -10,7 +10,7 @@
         const data = await response.json();
         let htmlString = '<ul>';
         for (let file of data) {
-          htmlString += `<li><a href="${file.path}/index.html">${file.name}</a></li>`;
+          htmlString += `<li><a href="reports/${file.name}/index.html">${file.name}</a></li>`;
         }
         htmlString += '</ul>';
         document.getElementById('content').innerHTML = htmlString;
